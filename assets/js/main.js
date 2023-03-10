@@ -1,8 +1,16 @@
-/*
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
+function sendMail() {
+	document.getElementById('contactForm').addEventListener('submit', function(event){
+		event.preventDefault()
+		console.log('boobs')
+		emailjs.sendForm('service_8qmc22q', 'contact-form', '#contactForm')
+			.then(console.log('Message Sent!'))
+			let success = document.getElementById('sendButton')
+			},function(error) {
+				console.log('Failed...', error)
+			}
+	)
+}
 
 (function($) {
 
