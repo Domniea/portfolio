@@ -1,3 +1,6 @@
+function showAlert(){
+	return alert('Message Sent!')
+}
 
 function sendMail() {
 	document.getElementById('contactForm').addEventListener('submit', function(event){
@@ -6,6 +9,8 @@ function sendMail() {
 		emailjs.sendForm('service_8qmc22q', 'contact-form', '#contactForm')
 			.then(console.log('Message Sent!'))
 			let success = document.getElementById('sendButton')
+			console.log(success)
+			showAlert()
 			},function(error) {
 				console.log('Failed...', error)
 			}
