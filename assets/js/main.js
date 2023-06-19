@@ -5,7 +5,6 @@ function showAlert(){
 function sendMail() {
 	document.getElementById('contactForm').addEventListener('submit', function(event){
 		event.preventDefault()
-		console.log('boobs')
 		emailjs.sendForm('service_8qmc22q', 'contact-form', '#contactForm')
 			.then(console.log('Message Sent!'))
 			let success = document.getElementById('sendButton')
